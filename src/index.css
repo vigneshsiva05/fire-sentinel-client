@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   IGNIS-AI — GLOBAL LIGHT THEME
+   Primary text: #111111  |  Background: #ffffff  |  Border: #d0d0d0
+   ============================================================ */
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #f5f5f5;
+    color: #111111;
+  }
+
+  body {
+    background-color: #f5f5f5;
+    color: #111111;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #ea580c;
+    color: #ffffff;
+  }
+
+  /* Force ALL text to be dark on light backgrounds globally */
+  h1, h2, h3, h4, h5, h6 {
+    color: #111111;
+  }
+
+  p, span, label, li, td, th, dt, dd {
+    color: inherit;
+  }
+
+  input, select, textarea {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    border-color: #d0d0d0 !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #888888 !important;
+  }
+
+  option {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+/* ============================================================
+   OVERRIDES: Force light backgrounds on dark-named classes
+   ============================================================ */
+.bg-dark-900,
+.bg-dark-850,
+.bg-dark-800,
+.bg-dark-700,
+.bg-dark-600 {
+  background-color: #f5f5f5 !important;
+}
+
+.border-slate-700,
+.border-slate-800,
+.border-slate-900 {
+  border-color: #d0d0d0 !important;
+}
+
+.text-slate-100,
+.text-slate-200,
+.text-slate-300 {
+  color: #333333 !important;
+}
+
+.text-slate-400,
+.text-slate-500 {
+  color: #666666 !important;
+}
+
+.text-white {
+  /* only override on light backgrounds; keep white on colored buttons */
+}
+
+/* Table dark overrides */
+.divide-slate-800\/60 > * + * {
+  border-color: #e8e8e8 !important;
+}
+
+/* ============================================================
+   CARD / GLASS PANELS — Light
+   ============================================================ */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.glass-panel-glow {
+  background: #ffffff;
+  border: 1px solid rgba(249,115,22,0.4);
+  box-shadow: 0 0 20px -5px rgba(249,115,22,0.15);
+}
+
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* ============================================================
+   LEAFLET MAP — Force LIGHT theme
+   ============================================================ */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #e8edf5 !important;
+  font-family: inherit;
+}
+
+/* Popups */
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #d0d0d0 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5;
+  color: #111111 !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  border: 1px solid #d0d0d0 !important;
+}
+
+.leaflet-popup-close-button {
+  color: #666666 !important;
+  padding: 6px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #f97316 !important;
+}
+
+/* Leaflet zoom controls */
+.leaflet-control-zoom a {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border-color: #d0d0d0 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #f5f5f5 !important;
+  color: #111111 !important;
+}
+
+/* Leaflet attribution */
+.leaflet-control-attribution {
+  background: rgba(255,255,255,0.85) !important;
+  color: #666666 !important;
+}
+
+/* Tooltip */
+.leaflet-tooltip {
+  background: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #d0d0d0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+}
+
+/* ============================================================
+   FILTER BAR — FORCE LIGHT
+   ============================================================ */
+.filter-bar-light {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+/* ============================================================
+   TABLE — FORCE LIGHT
+   ============================================================ */
+.table-light thead {
+  background: #f5f5f5;
+  color: #444444;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.table-light tbody tr {
+  border-bottom: 1px solid #eeeeee;
+  color: #222222;
+}
+
+.table-light tbody tr:hover {
+  background: #fafafa;
+}
+
+/* ============================================================
+   DROPDOWN / SELECT — FORCE LIGHT
+   ============================================================ */
+select {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #d0d0d0 !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  outline: none !important;
+  appearance: auto !important;
+}
+
+select:focus {
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 2px rgba(249,115,22,0.15) !important;
+}
+
+/* ============================================================
+   PULSE KEYFRAMES
+   ============================================================ */
+@keyframes ring-pulse {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239,68,68,0.7); }
+  70%  { transform: scale(1.15); box-shadow: 0 0 0 12px rgba(239,68,68,0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+}
+
+.pulse-critical {
+  animation: ring-pulse 1.8s infinite;
+}
+
+/* ============================================================
+   NOTIFICATION / TOAST OVERRIDES
+   ============================================================ */
+.demo-message-light {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
